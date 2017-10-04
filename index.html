@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>Tool Tạo Link Dailymotion</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+
+    <link href="css/style.css" rel="stylesheet">
+
+    <script src="js/angular-1-5-8.min.js"></script>
+    <script src="js/angular-route-1-2-18.min.js"></script>
+    <script src="js/angular-ui-router-0-3-0.min.js"></script>
+    <script src="node_modules/angular-clipboard/angular-clipboard.js"></script>
+
+       <!-- Our Website Javascripts -->
+    <script src="server/main.js"></script>
+    <script src="server/controller.js"></script>
+
+    <style rel="stylesheet">
+        /* TEMPLATE STYLES */
+
+        .nopadding {
+            margin-top: 0 !important;
+        }
+
+        .navbar {
+            background-color: #49071c;
+        }
+
+        footer.page-footer {
+            background-color: #49071c;
+            margin-top: 2rem;
+        }
+
+        .pattern-4 {
+            background-attachment: fixed;
+        }
+
+        .view {
+            background: url("img/w.jpg")no-repeat center center;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            height: 100vh;
+        }
+
+        .full-bg-img {
+            color: #fff;
+        }
+
+        .payment .fa:not(:first-child) {
+            margin-left: 10px;
+            color: rgba(255, 255, 255, .8);
+        }
+
+        input[type="text"]:focus:not([readonly]) {
+            border-color: #C00;
+            box-shadow: 0 1px 0 0 #C00;
+            color: #fff;
+        }
+
+        input[type="text"]:not([readonly])+label {
+            color: rgba(255, 255, 255, .65);
+        }
+
+        input[type="text"]:focus:not([readonly])+label {
+            color: #fff;
+        }
+        .navbar .btn-group .dropdown-menu a:hover {
+            color: #000 !important;
+        }
+        .navbar .btn-group .dropdown-menu a:active {
+            color: #fff !important;
+        }
+    </style>
+</head>
+
+<body ng-app="PM">
+    
+    <div ng-view></div>
+
+    <!--Footer-->
+    <footer class="page-footer center-on-small-only nopadding" style="padding-top: 0">
+        <!--Copyright-->
+        <div class="footer-copyright">
+            <div class="container-fluid">
+                © 2017 Copyright <a href="http://www.2itv.net" target="blank"> 2itv.net </a>
+
+            </div>
+        </div>
+        <!--/.Copyright-->
+
+    </footer>
+    <!--/.Footer-->
+
+    <!-- SCRIPTS -->
+
+    <!-- JQuery -->
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+
+    <!-- Bootstrap dropdown -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+
+    <script>
+        new WOW().init();
+    </script>
+
+</body>
+
+</html>

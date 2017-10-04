@@ -1,0 +1,30 @@
+<!--Mask-->
+    <div class="view hm-black-light">
+        <div class="full-bg-img flex-center pattern-4">
+            <ul>
+                <li>
+                    <h1 class="h1-responsive wow fadeInUp title"><strong>Vui Lòng Nhập Link Video</strong></h1>
+                </li>
+                <li>
+                    <div class="alert alert-success" id="success-alert" ng-show="new_link">
+                        <!--<button type="button" class="close" data-dismiss="alert">x</button>-->
+                        <strong>Khởi Tạo Link Thành Công</strong>
+                    </div>
+                    <div class="row wow fadeIn" data-wow-delay="0.4s">
+                        <div class="col-md-7">
+                            <div class="md-form">
+                                <input type="text" id="form2" class="form-control validate" placeholder="Link Video" style="color: #fff" ng-model="string">
+                                <!--<label for="form2">Link Video</label>-->
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="md-form">
+                                <button class="btn btn-lg btn-danger" clipboard supported="supported" text="new_link" on-copied="success()" on-error="fail(err)" ng-click="gen(string)">Tạo Link</button>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--/.Mask-->
