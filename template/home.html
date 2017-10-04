@@ -10,6 +10,10 @@
                         <!--<button type="button" class="close" data-dismiss="alert">x</button>-->
                         <strong>Khởi Tạo Link Thành Công</strong>
                     </div>
+                    <div class="alert alert-danger" id="danger-alert" ng-show="error">
+                        <!--<button type="button" class="close" data-dismiss="alert">x</button>-->
+                        <strong>Web chỉ hỗ trợ video từ Dailymotion và Ok.ru</strong>
+                    </div>
                     <div class="row wow fadeIn" data-wow-delay="0.4s">
                         <div class="col-md-7">
                             <div class="md-form">
@@ -19,7 +23,7 @@
                         </div>
                         <div class="col-md-5">
                             <div class="md-form">
-                                <button class="btn btn-lg btn-danger" clipboard supported="supported" text="new_link" on-copied="success()" on-error="fail(err)" ng-click="gen(string)">Tạo Link</button>
+                                <button class="btn btn-lg btn-danger waves-effect waves-dark" clipboard text="new_link" ng-click="gen(string)">Tạo Link</button>
                             </div>
                         </div>
                     </div>
