@@ -3,6 +3,7 @@ angular.module('PM', ['ngRoute','PM.controller'])
   $routeProvider
     // Home
     .when("/home", {templateUrl: "template/home.html", controller: "PMCtrl"})
+    .when("/comment", {templateUrl: "template/comment.html", controller: "CMCtrl"})
     
     .otherwise({ redirectTo: '/home' });
 }])
