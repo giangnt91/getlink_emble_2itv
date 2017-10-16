@@ -5,18 +5,26 @@
             <li>
                 <!--<h1 class="h1-responsive wow fadeInUp title"><strong>Vui Lòng Nhập Link Video</strong></h1>-->
                 <div class="md-form">
-                    <button class="btn btn-lg btn-default waves-effect waves-dark" clipboard text="ran.value" ng-click="gen()">Gen Comment</button>
+                    <button class="btn btn-lg btn-warning waves-effect waves-dark" ng-click="gen()">Gen Comment</button>
                 </div>
             </li>
             <li>
                 <div class="row wow fadeIn" data-wow-delay="0.4s">
-                    <div class="col-md-12">
+                    <div class="col-md-11">
                         <div class="md-form">
-                            <div class="md-form">
-                                <textarea type="text" id="form7" class="md-textarea" style="color: #fff" readonly ng-model="ran.value"></textarea>
-                            </div>
-                            <!--<label for="form2">Link Video</label>-->
+                            <textarea type="text" id="form7" class="md-textarea" style="color: #fff" readonly ng-model="ran"></textarea>
                         </div>
+                    </div>
+                    <div class="col-md-1">
+                        <button class="btn btn-lg btn-default waves-effect waves-dark" clipboard text="ran">copy</button>
+                    </div>
+                    <div class="col-md-11">
+                        <div class="md-form">
+                            <input type="text" id="form2" class="form-control validate" style="color: #fff" ng-model="full_name">
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <button class="btn btn-lg btn-default waves-effect waves-dark" clipboard text="full_name">copy</button>
                     </div>
                 </div>
             </li>

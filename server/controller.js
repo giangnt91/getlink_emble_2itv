@@ -86,6 +86,104 @@ var pm = angular.module('PM.controller', ['ngRoute', 'angular-clipboard'])
     })
 
     .controller('CMCtrl', function ($scope) {
+
+        $scope.fist_name = [
+            {
+                value: "Nguyễn Văn"
+            }, {
+                value: "Trần Thanh"
+            }, {
+                value: "Nguyễn Ngọc"
+            }, {
+                value: "Nguyễn Sĩ"
+            }, {
+                value: "Hồ Văn"
+            }, {
+                value: "Nguyễn Tấn"
+            }, {
+                value: "Ngô Thái"
+            }, {
+                value: "Nguyễn Siêu"
+            }, {
+                value: "Lâm Văn"
+            }, {
+                value: "Tô Hữu"
+            }, {
+                value: "Nguyễn Thanh"
+            }, {
+                value: "Trần Nhật"
+            }, {
+                value: "Trần Phương"
+            }, {
+                value: "Nguyễn Linh"
+            }, {
+                value: "Ngô Bích"
+            }, {
+                value: "Trần Phương"
+            }, {
+                value: "Lê Lam"
+            }, {
+                value: "Nguyễn Ngân"
+            }, {
+                value: "Nguyễn Phương"
+            }, {
+                value: "Trần Nhã"
+            }, {
+                value: "Trần Trúc"
+            }, {
+                value: "Nguyễn Diệp"
+            }
+        ]
+
+        $scope.last_name = [
+            {
+                value: "Mai"
+            }, {
+                value: "Sơn"
+            }, {
+                value: "Loan"
+            }, {
+                value: "Lan"
+            }, {
+                value: "Long"
+            }, {
+                value: "Linh"
+            }, {
+                value: "Khuê"
+            }, {
+                value: "An"
+            }, {
+                value: "Khánh"
+            }, {
+                value: "Hoa"
+            }, {
+                value: "Hương"
+            }, {
+                value: "Anh"
+            }, {
+                value: "Châu"
+            }, {
+                value: "Bích"
+            }, {
+                value: "Hân"
+            }, {
+                value: "Hà"
+            }, {
+                value: "Giang"
+            }, {
+                value: "Chi"
+            }, {
+                value: "Diệp"
+            }, {
+                value: "Dung"
+            }, {
+                value: "Đan"
+            }, {
+                value: "Hạnh"
+            }, {
+                value: "Vân"
+            }
+        ]
         
         $scope.string = [
                 {
@@ -125,6 +223,7 @@ var pm = angular.module('PM.controller', ['ngRoute', 'angular-clipboard'])
                 },
             ]
         $scope.gen = function () {
-                 $scope.ran = $scope.string[Math.floor(Math.random() * $scope.string.length)];
+                 $scope.ran = $scope.string[Math.floor(Math.random() * $scope.string.length)].value;
+                 $scope.full_name = $scope.fist_name[Math.floor(Math.random() * $scope.fist_name.length)].value +" "+ $scope.last_name[Math.floor(Math.random() * $scope.last_name.length)].value;
         }
     })
