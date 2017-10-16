@@ -87,6 +87,16 @@ var pm = angular.module('PM.controller', ['ngRoute', 'angular-clipboard'])
 
     .controller('CMCtrl', function ($scope) {
 
+        $scope.mail = [
+            {
+                value: "@gmail.com"
+            },{
+                value: "@hotmail.com"
+            },{
+                value: "@yahoo.com.vn"
+            }
+        ]
+
         $scope.fist_name = [
             {
                 value: "Nguyễn Văn"
@@ -191,39 +201,65 @@ var pm = angular.module('PM.controller', ['ngRoute', 'angular-clipboard'])
                 },{
                     value: "Mẫu này nhìn đẹp ghê mà cho mình hỏi có giao hàng xa không shop, nhìn thích quá mà không tiện đường đi mua"
                 },{
-                    value: "nhìn thích ghê lun, để xin tiền mẹ mua mới được hi."
+                    value: "Nhìn thích ghê lun, để xin tiền mẹ mua mới được hi."
                 },{
-                    value: "mình đặt 1 mẫu nhé, shop thông tin qua mail cho mình nhé"
+                    value: "Cho mình đặt 1 mẫu nhé, shop thông tin qua mail cho mình nhé"
                 },{
-                    value: "dễ thương gê, nhìn là yêu liền lun, mình đặt 1 mẫu nhé shop mai mình ghé lấy khoảng 9h sáng"
+                    value: "Dễ thương gê, nhìn là yêu liền lun, mình đặt 1 mẫu nhé shop mai mình ghé lấy khoảng 9h sáng"
                 },{
-                    value: "nhìn cũng được, shop gửi mình địa chỉ bữa nào ghé qua xem thử nhé"
+                    value: "Nhìn cũng được, shop gửi mình địa chỉ bữa nào ghé qua xem thử nhé"
                 },{
-                    value: "mới mua mẫu này, shop giao hàng khá nhanh phục tốt sản phẩm như hình nói chung là ok"
+                    value: "Mới mua mẫu này, shop giao hàng khá nhanh phục tốt sản phẩm như hình nói chung là ok"
                 },{
-                    value: "cho mình xin thời gian hoạt dộng của shop khi nào tiện qua thì mình ghé vào xem hàng lun"
+                    value: "Cho mình xin thời gian hoạt dộng của shop khi nào tiện qua thì mình ghé vào xem hàng lun"
                 },{
-                    value: "mình ở vĩnh long, nhìn mẫu đẹp quá shop có giao hàng xa không"
+                    value: "Mình ở vĩnh long, nhìn mẫu đẹp quá shop có giao hàng xa không dậy"
                 },{
-                    value: "có giao hàng thủ đức không admin, mình ở kha vạn cân, nếu giao thì mấy giờ tới nhỉ"
+                    value: "Có giao hàng thủ đức không admin, mình ở kha vạn cân, nếu giao thì mấy giờ tới nhỉ"
                 },{
-                    value: "mình ở quận 12 shop giao hàng thì mấy giờ tới nơi vậy"
+                    value: "Mình đang ở quận 12 shop giao hàng thì mấy giờ tới nơi vậy"
                 },{
-                    value: "nhìn thích ghê á, mà mình ở ngoại tỉnh shop có giao hàng ngoại tỉnh không"
+                    value: "Nhìn là thích liền lun, mà mình ở ngoại tỉnh shop có giao hàng ngoại tỉnh không"
                 },{
-                    value: "nhìn dễ thương quá, mình ở bình tân shop có giao hàng qua không nhỉ"
+                    value: "Quá dễ thương lun, mình ở bình tân shop có giao hàng qua không nhỉ"
                 },{
-                    value: "shop đóng cửa mấy giờ, tại mình tăng ca nên hay về trễ tầm hơn 8h lận muốn ghé mua mà sợ đóng cửa rồi"
+                    value: "Shop đóng cửa mấy giờ, tại mình tăng ca nên hay về trễ tầm hơn 8h lận muốn ghé mua mà sợ đóng cửa rồi"
                 },{
-                    value: "shop mở cửa mấy giờ nhỉ, sáng mình đi làm sớm có gì ghé qua mua hàng lun"
+                    value: "Shop mở cửa mấy giờ nhỉ, sáng mình đi làm sớm có gì ghé qua mua hàng lun"
                 },{
-                    value: "shop cho mình xin địa chỉ, bữa nào rảnh mình ghé ngang qua xem trực tiếp rồi mua lun"
+                    value: "Shop cho mình xin địa chỉ, bữa nào rảnh mình ghé ngang qua xem trực tiếp rồi mua lun"
                 },{
-                    value: "nhìn thích quá, shop alo mình nhé: 0982665666, khoảng trưa trưa sáng mình bận làm không nghe được nhé"
-                },
+                    value: "Shop giao hàng nhanh ghê, mới đặt buổi sáng trưa đã có rồi. yêu quá"
+                },{
+                    value: "Ngày nào cũng mở cửa hả shop, cuối tuần thứ 7 chủ nhật có đóng cửa không, tại mình chỉ rảnh cuối tuần thôi"
+                },{
+                    value: "Sao nhìn đẹp quá dậy, mình đặt 1 con shop chuẩn bị khoảng 6h chiều mình ghé lấy hàng nhé"
+                },{
+                    value: "Shop liên hệ mình nhé, mua tặng người yêu. alo mình khoảng 1h chiều nhé: 0909519633"
+                },{
+                    value: "Cute hết sức, không yêu không được. Giao hàng ở bình tân không shop ơi"
+                },{
+                    value: "Mình ở gò vấp, shop có giao hàng không. Nếu giao thì bao lâu thì tới nhỉ"
+                },{
+                    value: "Rất thích phong cách làm việc của shop, nhanh nhẹn nhiệt tình, giao hàng nhanh. Sẽ ủng hỗ thêm sau này nữa."
+                }
             ]
+       
+       
         $scope.gen = function () {
                  $scope.ran = $scope.string[Math.floor(Math.random() * $scope.string.length)].value;
-                 $scope.full_name = $scope.fist_name[Math.floor(Math.random() * $scope.fist_name.length)].value +" "+ $scope.last_name[Math.floor(Math.random() * $scope.last_name.length)].value;
+                 fist_name = $scope.fist_name[Math.floor(Math.random() * $scope.fist_name.length)].value;
+                 last_name = $scope.last_name[Math.floor(Math.random() * $scope.last_name.length)].value;
+                 $scope.full_name = fist_name +" "+ last_name;
+
+                 //chuyển tiếng việt thành không dấu
+                 tmp_fist = fist_name.replace(/à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ/g, "a").replace(/\ /g, '').replace(/đ/g, "d").replace(/đ/g, "d").replace(/ỳ|ý|ỵ|ỷ|ỹ/g,"y").replace(/ù|ú|ụ|ủ|ũ|ư|ừ|ứ|ự|ử|ữ/g,"u").replace(/ò|ó|ọ|ỏ|õ|ô|ồ|ố|ộ|ổ|ỗ|ơ|ờ|ớ|ợ|ở|ỡ/g,"o").replace(/è|é|ẹ|ẻ|ẽ|ê|ề|ế|ệ|ể|ễ/g, "e").replace(/ì|í|ị|ỉ|ĩ/g,"i").toLowerCase();
+                 
+                 tmp_last = last_name.replace(/à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ/g, "a").replace(/\ /g, '').replace(/đ/g, "d").replace(/đ/g, "d").replace(/ỳ|ý|ỵ|ỷ|ỹ/g,"y").replace(/ù|ú|ụ|ủ|ũ|ư|ừ|ứ|ự|ử|ữ/g,"u").replace(/ò|ó|ọ|ỏ|õ|ô|ồ|ố|ộ|ổ|ỗ|ơ|ờ|ớ|ợ|ở|ỡ/g,"o").replace(/è|é|ẹ|ẻ|ẽ|ê|ề|ế|ệ|ể|ễ/g, "e").replace(/ì|í|ị|ỉ|ĩ/g,"i").toLowerCase();
+
+                 $scope.email = tmp_last.toLowerCase() + tmp_fist + Math.floor(Math.random() * ( 99- 0 + 1)) + 0  + $scope.mail[Math.floor(Math.random() * $scope.mail.length)].value;
+                 
+                 console.log($scope.email);
+                 
         }
     })
