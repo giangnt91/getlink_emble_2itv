@@ -9,7 +9,13 @@
                 </div>
             </li>
             <li>
+                <div class="alert alert-success" id="success-alert" ng-show="email">
+                        <!--<button type="button" class="close" data-dismiss="alert">x</button>-->
+                        <strong>Khởi Tạo Comment Thành Công</strong>
+                    </div>
+
                 <div class="row wow fadeIn" data-wow-delay="0.4s">
+
                     <div class="col-md-11">
                         <div class="md-form">
                             <textarea type="text" id="form7" class="md-textarea" style="color: #fff" readonly ng-model="ran"></textarea>
@@ -18,14 +24,7 @@
                     <div class="col-md-1">
                         <button class="btn btn-lg btn-default waves-effect waves-dark" clipboard text="ran">copy</button>
                     </div>
-                    <div class="col-md-11">
-                        <div class="md-form">
-                            <input type="text" id="form2" class="form-control validate" style="color: #fff" ng-model="full_name" readonly>
-                        </div>
-                    </div>
-                    <div class="col-md-1">
-                        <button class="btn btn-lg btn-default waves-effect waves-dark" clipboard text="full_name">copy</button>
-                    </div>
+
                     <div class="col-md-11">
                         <div class="md-form">
                             <input type="text" id="form2" class="form-control validate" style="color: #fff" ng-model="email" readonly>
@@ -34,6 +33,16 @@
                     <div class="col-md-1">
                         <button class="btn btn-lg btn-default waves-effect waves-dark" clipboard text="email">copy</button>
                     </div>
+
+                    <div class="col-md-11">
+                        <div class="md-form">
+                            <input type="text" id="form2" class="form-control validate" style="color: #fff" ng-model="full_name" readonly>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <button class="btn btn-lg btn-default waves-effect waves-dark" clipboard text="full_name">copy</button>
+                    </div>
+                    
                 </div>
             </li>
         </ul>

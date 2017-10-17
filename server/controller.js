@@ -4,7 +4,18 @@ var pm = angular.module('PM.controller', ['ngRoute', 'angular-clipboard'])
         $scope.string;
         $scope.gen = function () {
             if ($scope.string !== undefined && $scope.string !== null) {
-                if ($scope.string.indexOf("dailymotion.com/video/") != -1) {
+                if($scope.string.indexOf("fshare.vn/file/") != -1){
+                    tmp = $scope.string.slice(-10);
+                    $scope.new_link = "https://getlinkfshare.com/file/" + tmp;
+                    $("#success-alert").fadeTo(2000, 1000).slideUp(500, function () {
+                        $("#success-alert").slideUp(2000);
+                    });
+
+                    $scope.string = null;
+                    window.open($scope.new_link, '_blank');
+                    return;
+
+                } else if ($scope.string.indexOf("dailymotion.com/video/") != -1) {
                     tmp = $scope.string.slice(-7);
                     $scope.new_link = "//www.dailymotion.com/embed/video/" + tmp;
 
@@ -37,6 +48,15 @@ var pm = angular.module('PM.controller', ['ngRoute', 'angular-clipboard'])
                 } else {
                     $scope.error = true;
 
+                    if ($scope.string.indexOf("fshare.vn") != -1) {
+                        $scope.error_message = "Link video fshare có dạng: fshare.vn/file/fileid";
+                        $("#danger-alert").fadeTo(5000, 2000).slideUp(500, function () {
+                            $("#danger-alert").slideUp(3000);
+                        });
+
+                        $scope.string = null;
+                        return;
+                    }
                     if ($scope.string.indexOf("youtube.com") != -1 || $scope.string.indexOf("youtu.be") != -1) {
                         $scope.error_message = "Link video youtube có dạng: youtube.com/watch?v=videoid";
                         $("#danger-alert").fadeTo(5000, 2000).slideUp(500, function () {
@@ -179,8 +199,6 @@ var pm = angular.module('PM.controller', ['ngRoute', 'angular-clipboard'])
             }, {
                 value: "Hà"
             }, {
-                value: "Giang"
-            }, {
                 value: "Chi"
             }, {
                 value: "Diệp"
@@ -192,6 +210,30 @@ var pm = angular.module('PM.controller', ['ngRoute', 'angular-clipboard'])
                 value: "Hạnh"
             }, {
                 value: "Vân"
+            }, {
+                value: "Thiên"
+            }, {
+                value: "Thiện"
+            }, {
+                value: "Tâm"
+            }, {
+                value: "Thái"
+            }, {
+                value: "Nhung"
+            }, {
+                value: "Tài"
+            }, {
+                value: "Hòa"
+            }, {
+                value: "Trung"
+            }, {
+                value: "Hiếu"
+            }, {
+                value: "Quyên"
+            }, {
+                value: "Huyền"
+            }, {
+                value: "Tú"
             }
         ]
         
@@ -242,6 +284,20 @@ var pm = angular.module('PM.controller', ['ngRoute', 'angular-clipboard'])
                     value: "Mình ở gò vấp, shop có giao hàng không. Nếu giao thì bao lâu thì tới nhỉ"
                 },{
                     value: "Rất thích phong cách làm việc của shop, nhanh nhẹn nhiệt tình, giao hàng nhanh. Sẽ ủng hỗ thêm sau này nữa."
+                },{
+                    value: "Không thể không yêu được nhìn đẹp quá trời lun, shop mail thông tin qua cho mình nhé"
+                },{
+                    value: "Nay lướt web vô tình vô web này thì mẫu hàng nào cũng đẹp, mún mua nhưng mình ở cà mau lận, shop có giao hàng không nhỉ"
+                },{
+                    value: "Mình cần mua tặng vợ, shop liên hệ mình để lấy thông tin nhé: 01646496953"
+                },{
+                    value: "Nhìn thật đáng yêu và dễ thương, mình sẽ dành tiền để ghé mua"
+                },{
+                    value: "Ở phú nhuận có giao hàng không shop, mình ở ngã tư phú nhuận đối diện cây săn nhé"
+                },{
+                    value: "Trưa nay giao một mẫu qua phan đăng lưu, gần fptshop nhé. Tới nới thì liên hệ mình: 01649605889"
+                },{
+                    value: "Qua mới dắt nhỏ em gái qua mua, shop phục vụ nhiệt tình dễ thương, rất hài lòng với shop"
                 }
             ]
        
@@ -258,8 +314,10 @@ var pm = angular.module('PM.controller', ['ngRoute', 'angular-clipboard'])
                  tmp_last = last_name.replace(/à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ/g, "a").replace(/\ /g, '').replace(/đ/g, "d").replace(/đ/g, "d").replace(/ỳ|ý|ỵ|ỷ|ỹ/g,"y").replace(/ù|ú|ụ|ủ|ũ|ư|ừ|ứ|ự|ử|ữ/g,"u").replace(/ò|ó|ọ|ỏ|õ|ô|ồ|ố|ộ|ổ|ỗ|ơ|ờ|ớ|ợ|ở|ỡ/g,"o").replace(/è|é|ẹ|ẻ|ẽ|ê|ề|ế|ệ|ể|ễ/g, "e").replace(/ì|í|ị|ỉ|ĩ/g,"i").toLowerCase();
 
                  $scope.email = tmp_last.toLowerCase() + tmp_fist + Math.floor(Math.random() * ( 99- 0 + 1)) + 0  + $scope.mail[Math.floor(Math.random() * $scope.mail.length)].value;
-                 
-                 console.log($scope.email);
+
+                 $("#success-alert").fadeTo(5000, 2000).slideUp(500, function () {
+                     $("#success-alert").slideUp(3000);
+                 });
                  
         }
     })
