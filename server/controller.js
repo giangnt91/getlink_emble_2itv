@@ -25,7 +25,7 @@ var pm = angular.module('PM.controller', ['ngRoute', 'angular-clipboard'])
                     return;
 
                 } else if ($scope.string.indexOf("dailymotion.com/video/") != -1) {
-                    tmp = $scope.string.slice(-7);
+                    tmp = $scope.string.slice(33,40);
                     $scope.new_link = "//www.dailymotion.com/embed/video/" + tmp;
 
                     $("#success-alert").fadeTo(2000, 1000).slideUp(500, function () {
